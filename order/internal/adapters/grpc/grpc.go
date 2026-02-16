@@ -9,7 +9,7 @@ import (
 
 func (a Adapter) Create(ctx context.Context, request *order.CreateOrderRequest) (*order.CreateOrderResponse, error) {
 	var orderItems []domain.OrderItem
-	for _, orderItem := range request.OrderItem {
+	for _, orderItem := range request.OrderItems {
 		orderItems = append(orderItems, domain.OrderItem{
 			ProductCode: orderItem.ProductCode,
 			UnitPrice:   orderItem.UnitPrice,

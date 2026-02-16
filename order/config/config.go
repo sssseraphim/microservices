@@ -31,3 +31,7 @@ func GetApplicationPort() int {
 
 	return port
 }
+
+func GetPaymentServiceUrl() string {
+	return getEnviromentValue("PAYMENT_SERVICE_URL")
+}
